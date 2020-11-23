@@ -1,0 +1,15 @@
+<h1>Artist Show Page</h1>
+
+<h3><%= @artist.name %></h3>
+
+<p><%= @artist.age %></p>
+
+<p><%= @artist.title %></p>
+
+<h1>My Instruments</h1>
+
+<% @artist.instruments.uniq.each do |instrument| %>
+  <p><%= instrument.name %></p>
+<% end %>
+
+<%= link_to "Index Page", artists_path %>
